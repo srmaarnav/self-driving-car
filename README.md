@@ -6,7 +6,7 @@ This project aims to simulate a self-driving car using JavaScript. It focuses on
 
 ## Features
 
-1. Possibility of creating a model world by hand and assimilating the Open Street Map data.
+1. Possibility of creation of model world by hand, as well as by assimilating the Open Street Map data.
 2. Design the world by adding various traffic markers.
 3. Play with and find the specific Neural Network Configuration for the efficient car.
 
@@ -16,9 +16,9 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
 2. Go to the index.html file inside the world directory and create your world, make sure to add a car in the world.
-3. Save the world, which is stored as browser local storage data.
+3. Save the world, which is stored in the form of browser local storage data.
 4. Navigate to the index.html file in the root directory that contains the actual application.
-5. The application contains a save button to save the desired neural network in the local memory that you can observe as the car moves, and on each reload that specific Neural Network configuration is loaded.
+5. The application contains a save button to save the desired neural network in the local memory that you can observe as the car moves, and on each realod that specific Neural Network configuration is loaded.
 
 ## Illustrations
 
@@ -28,7 +28,7 @@ To set up the project locally, follow these steps:
 
 ### Open Street Map
 
-The data extraction for OSM data was done via the Overpass Turbo website(https://overpass-turbo.eu/), which allowed easy extraction of data.
+The data extraction for OSM data was done via the Overpass Turbo website(https://overpass-turbo.eu/), that allowed easier extraction of data.
 
 The code snippet that best fit me for the project was:
 
