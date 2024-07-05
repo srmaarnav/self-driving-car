@@ -9,6 +9,10 @@ class Polygon{
         }
     }
 
+    static load(info){
+        return new Polygon(info.points.map((i) => new Point(i.x, i.y)));
+    }
+
     static union(polys){
         Polygon.multiBreak(polys);
         const keptSegments = [];
@@ -62,6 +66,25 @@ class Polygon{
                 }
             }
         }
+    }
+
+    distanceToPoint(point){
+        return Math.min(...this.segments.map((s) => s.distanceToPoint(point)));
+    }
+
+    distanceToPoly(poly){
+        return Math.min(...this.points.map((p) => poly.distanceToPoint(p)));
+    }
+
+    intersectsPoly(poly){
+        for(let s1 of this.segments){
+            for(let s2 of poly.segments){
+                if(getIntersection(s1.p1, s1.p2, s2.p1, s2.p2)){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     containsSegment(seg){
